@@ -21,9 +21,9 @@ In order to get the highest possible score, all of the following requirements sh
 
 
 ## ToDo
-* Finish the styles of the entire application
-* Auto upperCase & lowerCase search cities
-* Extra inputs for different pollution parameters
+* Add extra inputs for different pollution parameters
+* Fix input displaying suggesting countries
+* Fix fade-out of cities description
 * Fix the display of French cities
 * Fix German special characters
 

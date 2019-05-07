@@ -7,18 +7,28 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Search most polluted cities</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.7/jquery.autocomplete.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.7/jquery.autocomplete.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=latin-ext" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
 </head>
 
-<body>
-  <form class="form">
-    <input id="country-name" class="input" type="text" placeholder="Country" autocomplete="on">
-    <button id="search">search</button>
-  </form>
+<body class="body">
+  <div class="body__shadow"></div>
+  <div class="space"></div>
+  <section>
+    <form action="" class="form">
+      <h1>Most polluted cities</h1>
+      <div class="input-container">
+        <input id="name" class="input" type="text" pattern=".+" required value=""/>
+        <label class="label" for="name">Country</label>
+        <button id="search" class="btn draw-border">search</button>
+      </div>
+    </form>
+  </section>
   <section class="countries_wrapper">
+    <h2 id="countryName"></h1>
     <ul id="countries"></ul>
   </section>
   <script src="scripts.js"></script>

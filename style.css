@@ -2,7 +2,86 @@
  v2.0 | 20110126
  License: none (public domain)
  */
- html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -10,49 +89,288 @@
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
   display: block;
 }
+
 body {
   line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
   list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
   quotes: none;
 }
-blockquote:before, blockquote:after, q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-
-.form {
-  display: flex;
-  margin-top: 30px;
-  justify-content: center;
+/*==========================================================================*/
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
+
+.body {
+  color: #ccc;
+  background-image: url('https://images.pexels.com/photos/269633/pexels-photo-269633.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: 'Roboto', sans-serif;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+}
+
+.body__shadow {
+  background-color: #02030fe5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.space {
+  height: 30px;
+}
+section {
+  margin: 0px auto 0;
+  padding: 20px;
+  border-radius: 0 0 2px 2px;
+  background-color: rgba(59, 58, 58, 0.356);
+  max-width: 700px;
+}
+
 .countries_wrapper {
-  margin: 100px  30px 0 30px;
+  margin-top: 60px;
 }
 
-ul li {
-  padding-top: 5px;
+.countries__list {
+  overflow: hidden;
+  padding: 10px 10px 0 10px;
 }
 
-ul li p {
+.countries__wrapper {
+  overflow: hidden;
+}
+
+.countries__wrapper__description {
+  border-left: 2px solid #1488F3;
+  border-bottom: 2px solid #86bfff;
+  border-radius: 5px;
+  line-height: 1.5rem;
+
   display: none;
+  width: 100%;
+  transition: 3s all ease-in-out;
+  /* animation: 3s slide-up; */
 }
-
 
 .show-description {
+  animation: 0.6s slide-down;
+  margin-top: 0%;
   display: block;
-  margin: 5px 0 20px 10px;
+  padding: 5px 20px 10px 20px;
 }
 
+@keyframes slide-up {
+  from {
+    margin-top: 100%;
+    height: 300%; 
+  }
+
+  to {
+    margin-top: 0%;
+    height: 100%;
+  }
+}
+
+
+@keyframes slide-down {
+  from {
+    margin-top: -100%;
+    height: 300%; 
+  }
+
+  to {
+    margin-top: 0%;
+    height: 100%;
+  }
+}
+
+
+
+
+
+h1 {
+  font-size: 1.7rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+
+
+
+/* Input */
+
+.input-container {
+  position: relative;
+}
+
+input {
+  border: 0;
+  border-bottom: 2px solid #9e9e9e;
+  outline: none;
+  transition: .2s ease-in-out;
+  box-sizing: border-box;
+}
+
+label {
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #616161;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  font-size: 1rem;
+  cursor: text;
+  transition: .2s ease-in-out;
+  box-sizing: border-box;
+}
+
+input,
+label {
+  background-color: transparent;
+  color: #ccc;
+  width: 100%;
+  height: 3rem;
+  font-size: 1rem;
+}
+
+input:valid,
+input:focus {
+  border-bottom: 2px solid #26a69a;
+}
+
+
+input:valid+label,
+input:focus+label {
+  color: #26a69a;
+  font-size: .8rem;
+  top: -30px;
+  pointer-events: none;
+}
+
+
+
+/* Button */
+
+.draw-border {
+  box-shadow: inset 0 0 0 2px #26a69a;
+  color: #26a69a;
+  transition: 0.25s;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.draw-border::before,
+.draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.draw-border::before {
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+}
+
+.draw-border::after {
+  border-top-width: 2px;
+  border-right-width: 2px;
+}
+
+.draw-border:hover {
+  color: #ffe593;
+}
+
+.draw-border:hover::before,
+.draw-border:hover::after {
+  border-color: #ffe593;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.draw-border:hover::before {
+  transition-delay: 0s, 0s, 0.25s;
+}
+
+.draw-border:hover::after {
+  transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 0.8rem 'Roboto Slab', sans-serif;
+  padding: 10px 20px;
+  letter-spacing: 0.05rem;
+  border-radius: 5px;
+
+}
+
+.btn:focus {
+  outline: 2px dotted #58afd1;
+}
